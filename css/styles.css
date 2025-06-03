@@ -1,0 +1,211 @@
+:root {
+    /* Color Variables */
+    --color-primary: #2196F3;
+    --color-secondary: #4CAF50;
+    --color-accent: #FF9800;
+    --color-background: #F5F7FA;
+    --color-text: #263238;
+    --color-white: #ffffff;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+/* Header & Navigation */
+.header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.join-btn {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #3d8b40;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(33, 150, 243, 0.8), rgba(33, 150, 243, 0.8)),
+                url('../images/hero-beach.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    padding-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: var(--spacing-md);
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-btn {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #f57c00;
+}
+
+/* Map Section */
+.map-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.map-container {
+    height: 400px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: var(--spacing-md);
+}
+
+/* Weather Section */
+.weather-section {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.weather-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Community Section */
+.community-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-text);
+    color: var(--color-white);
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.social-links a {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
