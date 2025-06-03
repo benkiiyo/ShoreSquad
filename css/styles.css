@@ -141,6 +141,64 @@ body {
 .weather-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+.weather-widget {
+    background: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-md);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.weather-current {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.weather-icon {
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+.weather-info h3 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+.temperature {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.description {
+    color: var(--color-text);
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.detail i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
 }
 
 /* Community Section */
